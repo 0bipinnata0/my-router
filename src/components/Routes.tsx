@@ -61,10 +61,6 @@ const Routes: React.FC<React.PropsWithChildren<{ role?: string }>> = ({
     }, <Empty />);
   }, [children, currentRoute, role]);
 
-  useEffect(() => {
-    base.set(currentRoute, el);
-  }, [el, currentRoute]);
-
   const cache = useMemo(() => {
     !base.has(currentRoute) && base.set(currentRoute, el);
     return base;

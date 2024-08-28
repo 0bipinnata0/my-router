@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import routeEmit from "../routeEmit";
 import { CourrentRouteProvider } from "../../hook/useCurrentRoute";
+import KeepAlive from "../KeepAlive";
 
 const BrowserRouter: React.FC<React.PropsWithChildren> = ({ children }) => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const BrowserRouter: React.FC<React.PropsWithChildren> = ({ children }) => {
 
   return (
     <CourrentRouteProvider initialValue={location.pathname}>
-      {children}
+      <KeepAlive>{children}</KeepAlive>
     </CourrentRouteProvider>
   );
 };

@@ -5,6 +5,12 @@ const Route: React.FC<
     role?: string[];
   }>
 > = () => {
+  // console.info(">>>>");
+  // const { addNewAliveItem } = useKeepAlive();
+  // useEffect(() => {
+  //   console.info(">>>", path, element);
+  //   addNewAliveItem(path, element);
+  // }, []);
   return null;
 };
 
